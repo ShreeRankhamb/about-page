@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+header {
+  width: 100%;
+  height: 100%;
+
+  /* border: solid 2px black; */
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  /* border: solid; */
+  display: flex;
+  flex-direction: row;
+}
+.elements {
+  position: relative;
+  left: 40%;
+
+  width: 50%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* margin-left: 50px; */
+  padding: 10px;
+}
+.elements a {
+  display: inline-block;
+
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+.elements a:first-child {
+  color: blue;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 7px;
+}
+.elements a:hover {
+  font-size: 17px;
+  color: blue;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  transform: scale(1.1);
+  text-decoration-thickness: 1.5px;
+}
+.country {
+  margin-top: 5px;
+  position: relative;
+  left: 20%;
+}
+
+/* style for country language */
+/* select {
+    width: 100px;
+    height: 5vh;
+    font-size: 10px;
+  color: black;
+  font-size: 12px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    outline: none;
+
+    transition: all 0.3s ease-in-out;
+}
+
+/* Change border color and background on focus */
+/* select:focus { */
+/* border-color: #2980b9;
+    background-color: #e0f7fa; }*/
+
+.nav-down {
+  height: 100%;
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+.logo {
+  
+  position: relative;
+  top: 35%;
+  right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 35%;
+  height: 100%;
+}
+#logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+#job-text {
+  position: relative;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(53, 53, 53);
+  letter-spacing: 1px;
+}
+.search-box {
+
+  position: relative;
+  right: 5%;
+  width: 35%;
+
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 50px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: placeholder 0.3s ease-in-out; /* Transition for the placeholder */
+}
+
+/* Smooth transition for placeholder disappearing */
+
+.search-input::placeholder {
+   
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.search-input:focus::placeholder {
+  
+  opacity: 0px; /* Hide the placeholder smoothly when the input is focused */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: auto;
+  color: #888;
+}
+
+.sign{
+   
+   width: 20%;
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+   padding: 0px 10px 20px 50px;
+}
+#loginBtn{
+    width: 70px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+  font-size: 14px;
+   text-align: center;
+    position: relative;
+    top: 10%;
+    color:#1f71cf;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+#loginBtn:hover{
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+#registerBtn{
+    width: 100px;
+    padding: 5px;
+   position: relative;
+   top: 10%;
+   font-size: 14px;
+   text-align: center;
+   font-weight: 700;
+   color: #1f71cf;
+   text-decoration: none;
+   border: 1px solid;
+   border-radius: 10px;
+}
+
+#registerBtn:hover{
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+.hero{
+  width: 100%;
+  height: 80vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+gap: 50px;
+}
+.hero-left{
+  
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px 10px 40px;
+  position: relative;
+  bottom: 2%;
+}
+
+#hline{
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 600;
+margin-left: 100px;
+margin-top: 100px;
+
+
+}
+.blinking-slide {
+  position: relative;
+  animation: blink-slide 2s infinite;
+  transition: color 0.5s, opacity 0.5s; /* Smooth transition for color and opacity */
+}
+
+/* Blinking effect */
+@keyframes blink-slide {
+  0%, 100% {
+      opacity: 1; /* Fully visible */
+  }
+  50% {
+      opacity: 0; /* Invisible during the blink */
+  }
+}
+.interest {
+  color: blue; /* Change this to your desired color for Interest */
+}
+
+ /* Specific color for "Passion" */
+ .passion {
+  color: orange; /* Change this to your desired color */
+}
+#hslog{
+
+  position: relative;
+width: 500px;
+left: 14%;
+color: rgb(37, 37, 37);
+font-weight: medium;
+font-size: 15px;
+}
+
+.hero-right{
+  padding-left: 10%;
+  padding-top: 5%;
+  width: 50%;
+  position: relative;
+  
+
+}
+.hero-right img{
+
+  width: 400px;
+  height: 350px;
+  animation: prac 0.5s ease-in;
+
+}
+      
+@keyframes 
+prac{
+   from{
+       margin-top: 100px;
+   }
+   to{
+       margin-top: 0px;
+   
+}
+}
+
+/*about.html file*/
+.review h1{
+   justify-content: center;
+   display: flex;
+}
+
+.testi_container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+}
+
+.testi_card {
+  padding: 29px;
+  border-radius: 10px;
+  box-shadow: -5px 5px 21px rgba(51, 51, 51, 0.11);
+  transition: all 1s ease;
+}
+
+.testi_card:hover {
+  box-shadow: -9px 9px 21px rgba(51, 51, 51, 0.15);
+  transform: translateY(-4px);
+}
+
+.testi_card .quote {
+  width: 42px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.testi_card>p {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.testi_card .test_person {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.test_person IMG {
+  margin-right: 10PX;
+}
+
+.test_person .name_desig H4 {
+  font-size: 19px;
+  color: var(--btn);
+}
+
+.test_person .name_desig p {
+  font-size: 14px;
+}
+
+.review{
+  margin: 40px auto;
+  width:80%;
+}
+
+.review1{
+  margin:60px auto;
+}
